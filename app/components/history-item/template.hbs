@@ -1,0 +1,19 @@
+<li class="flex-column">
+  <div class="flex-display flex-row spacer-bottom">
+    <div class="flex-center flex-display">
+      <i class="big {{model.iconCss}} spacer-right"></i>
+    </div>
+    <div>
+      {{#if showSystemName}}
+        <h3 class="no-margin">{{model.name}}</h3>
+      {{/if}}
+      <h4 class="no-margin">
+        {{if model.title model.title "No title provided"}}
+      </h4>
+      <h5 class="no-margin">
+        {{moment-format model.date "M/D/YYYY h:mm A" timeZone="America/Denver"}}
+      </h5>
+    </div>
+  </div>
+  <p>{{if model.detail model.detail "No details provided"}}</p>
+</li>

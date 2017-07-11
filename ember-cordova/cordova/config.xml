@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.uchealth.enterpriseNotifications" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>UCH Alerts</name>
+    <description>
+    </description>
+    <content src="index.html"/>
+    <access origin="*"/>
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+    <preference name="LoadUrlTimeoutValue" value="70000"/>
+    <platform name="ios">
+        <allow-intent href="itms:*"/>
+        <allow-intent href="itms-apps:*"/>
+        <icon height="40" id="icon-40" src="res/icon/ios/icon-40.png" width="40"/>
+        <icon height="57" id="icon" src="res/icon/ios/icon.png" width="57"/>
+        <icon height="80" id="icon-40@2x" src="res/icon/ios/icon-40@2x.png" width="80"/>
+        <icon height="120" id="icon-40@3x" src="res/icon/ios/icon-40@3x.png" width="120"/>
+        <icon height="60" id="icon-60" src="res/icon/ios/icon-60.png" width="60"/>
+        <icon height="120" id="icon-60@2x" src="res/icon/ios/icon-60@2x.png" width="120"/>
+        <icon height="180" id="icon-60@3x" src="res/icon/ios/icon-60@3x.png" width="180"/>
+        <icon height="114" id="icon@2x" src="res/icon/ios/icon@2x.png" width="114"/>
+        <icon height="29" id="icon-small" src="res/icon/ios/icon-small.png" width="29"/>
+        <icon height="58" id="icon-small@2x" src="res/icon/ios/icon-small@2x.png" width="58"/>
+        <icon height="87" id="icon-small@3x" src="res/icon/ios/icon-small@3x.png" width="87"/>
+        <icon height="152" id="icon-76@2x" src="res/icon/ios/icon-76@2x.png" width="152"/>
+        <icon height="76" id="icon-76" src="res/icon/ios/icon-76.png" width="76"/>
+        <icon height="72" id="icon-72" src="res/icon/ios/icon-72.png" width="72"/>
+        <icon height="144" id="icon-72@2x" src="res/icon/ios/icon-72@2x.png" width="144"/>
+        <icon height="50" id="icon-50" src="res/icon/ios/icon-50.png" width="50"/>
+        <icon height="100" id="icon-50@2x" src="res/icon/ios/icon-50@2x.png" width="100"/>
+    </platform>
+    <platform name="android">
+        <allow-intent href="market:*"/>
+        <icon id="ldpi" src="res/icon/android/ldpi.png" density="ldpi"/>
+        <icon id="mdpi" src="res/icon/android/mdpi.png" density="mdpi"/>
+        <icon id="hdpi" src="res/icon/android/hdpi.png" density="hdpi"/>
+        <icon id="xhdpi" src="res/icon/android/xhdpi.png" density="xhdpi"/>
+        <icon id="xxhdpi" src="res/icon/android/xxhdpi.png" density="xxhdpi"/>
+        <icon id="xxxhdpi" src="res/icon/android/xxxhdpi.png" density="xxxhdpi"/>
+    </platform>
+    <engine name="android" spec="~6.1.0"/>
+    <engine name="ios" spec="~4.3.1"/>
+    <plugin name="cordova-plugin-crosswalk-webview" spec="~2.3.0">
+        <variable name="XWALK_VERSION" value="23+"/>
+        <variable name="XWALK_LITEVERSION" value="xwalk_core_library_canary:17+"/>
+        <variable name="XWALK_COMMANDLINE" value="--disable-pull-to-refresh-effect"/>
+        <variable name="XWALK_MODE" value="embedded"/>
+        <variable name="XWALK_MULTIPLEAPK" value="true"/>
+    </plugin>
+    <plugin name="cordova-plugin-whitelist" spec="1"/>
+    <plugin name="cordova-plugin-wkwebview-engine" spec="~1.1.3"/>
+    <plugin name="de.appplant.cordova.plugin.local-notification" spec="https://github.com/katzer/cordova-plugin-local-notifications"/>
+</widget>

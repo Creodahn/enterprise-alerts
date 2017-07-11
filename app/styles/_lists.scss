@@ -1,0 +1,179 @@
+/* Lists */
+
+// styles specific to lists
+
+// declare unique styles for .history-list
+.history-list {
+  & > ul {
+    & > li {
+      @include box-shadow($shadow);
+      @include display-flex;
+
+      background-color: #faf8f2;
+      border: 1px solid #cecece;
+      margin-bottom: 10px;
+      padding: 15px;
+      position: relative;
+      width: 100%;
+      z-index: 0;
+    }
+
+    @include flex-direction(column);
+
+    background-color: transparent;
+    z-index: 0;
+  }
+
+  background-color: transparent;
+  border: 1px solid #cecece;
+  max-height: 400px;
+  padding: 8px;
+}
+
+// declare shared styles for .history-list and .status-list
+.history-list,
+.status-list {
+  border-bottom-left-radius: 4px;
+}
+
+// declare shared styles for .history-list, .status-list and .system-list
+.history-list,
+.status-list,
+.system-list {
+  & > ul {
+    & > li {
+      & > * {
+        position: relative;
+        z-index: 0;
+      }
+
+      &.group-header {
+        & > .hr {
+          @include box-sizing(border-box);
+
+          background-color: #6495ed;
+          border: none;
+          height: 1px;
+          margin-left: 5px;
+          width: 100%;
+        }
+
+        align-items: center;
+        color: #6495ed;
+        padding: 5px 0 5px;
+      }
+
+      &.group-header,
+      &.separator {
+        @include border-radius(0);
+        @include box-sizing(border-box);
+        @include display-flex;
+        @include flex(1);
+
+        border-bottom: 1px solid #6495ed;
+        margin: 10px;
+        min-width: calc(100% - 20px);
+      }
+
+      position: relative;
+    }
+
+    @include display-flex;
+
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    z-index: 0;
+  }
+
+  @include scrolling-shadows-vertical;
+
+  border-top-left-radius: 4px;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+}
+
+// declare shared styles for .status-list and .system-list
+.status-list,
+.system-list {
+  & > ul {
+    & > li {
+      &:hover {
+        background-color: #cecece;
+      }
+
+      &.error-message {
+        min-height: 25px;
+        min-width: 100%;
+      }
+
+      &.list-item {
+        @include border-radius(4px);
+        @include box-sizing(border-box);
+      }
+
+      & > a {
+        & > i {
+          @include display-flex;
+
+          padding-right: 5px;
+        }
+
+        text-decoration: none;
+        width: 100%;
+      }
+
+      @include display-flex;
+      @include flex-direction(row);
+      @include transition(.5s background-color ease-in-out);
+
+      min-height: inherit;
+      padding: 0 4px;
+    }
+  }
+
+  @include box-sizing(content-box);
+  @include display-flex;
+  @include flex(1);
+
+  border: 1px solid black;
+  margin-bottom: 5px;
+  min-height: 50px;
+  padding: 5px;
+}
+
+// declare unique styles for .status-list
+.status-list {
+  & > ul {
+    & > li {
+      @media screen and (min-width: 500px) and (max-width: 769px) {
+        min-width: 33.333333%;
+      }
+
+      min-width: 50%;
+    }
+
+    @include flex-direction(row);
+
+    margin: 0;
+  }
+}
+
+// declare unique styles for .system-list
+.system-list {
+  & > ul {
+    & > li {
+      padding-right: 20px;
+    }
+
+    @include flex-direction(column);
+
+    margin: 0;
+    max-height: 320px;
+  }
+
+  @include scrolling-shadows-horizontal;
+
+  border-top-right-radius: 4px;
+}

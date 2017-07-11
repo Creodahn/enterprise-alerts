@@ -1,0 +1,23 @@
+<!--
+     The notification route displays a list of all current notifications
+     when more than one system is updated at the same time
+-->
+<div>
+  {{#modal-window
+    closable=true
+    id="notification-modal"
+    showOnTransition=true
+    title="Notifications"
+    title-classes="text-red"
+    transition="horizontal flip"
+    modalClosed="modalClosed"
+  }}
+    <div class="flex-spacer history-list">
+      <ul class="no-margin no-padding">
+        {{#each sortedNotifications as |system|}}
+          {{history-item model=system showSystemName=true}}
+        {{/each}}
+      </ul>
+    </div>
+  {{/modal-window}}
+</div>

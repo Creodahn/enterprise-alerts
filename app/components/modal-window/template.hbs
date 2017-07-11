@@ -1,0 +1,11 @@
+<div id={{id}} class="ui modal transition {{modal-classes}}">
+  {{#if closable}}
+    <i class="close icon"></i>
+  {{/if}}
+  <div class="header {{title-classes}}">
+    {{if title title ''}}
+  </div>
+  <div class="content {{content-classes}}">
+    {{yield}}
+  </div>
+</div>

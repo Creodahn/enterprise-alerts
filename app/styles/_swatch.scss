@@ -1,0 +1,16 @@
+// handle the possible swatch colors
+$colors: (gray, $light-gray), (green, $green), (red, $uchealth-red), (yellow, $yellow);
+
+.swatch {
+  @each $color-txt, $color in $colors {
+    &-#{$color-txt} {
+      background-color: $color;
+    }
+  }
+
+  @include border-radius(4px);
+  @include transition(.3s);
+
+  height: 30px;
+  width: 100%;
+}

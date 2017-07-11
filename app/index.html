@@ -1,0 +1,30 @@
+<!--
+     index.html is the entry point for the Ember application.
+     If you need to import external script or stylesheet files, add them to the
+     head element here. Otherwise, this file is essentially Ember boilerplate.
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UCHealth Enterprise Alerts System</title>
+    <meta name="description" content="Enterprise Alerts System for UCHealth">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/enterprise-notifications.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/enterprise-notifications.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

@@ -1,0 +1,61 @@
+// Setup default values for HTML elements
+* {
+  @include user-select(none);
+}
+
+a,
+li {
+  &:focus {
+    outline: none;
+  }
+}
+
+body,
+main {
+  background-color: $bg-color;
+}
+
+body,
+html,
+main {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+button {
+  &:disabled {
+    color: #d3d3d3;
+  }
+
+  text-align: center;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  max-height: 80px;
+  max-width: 100%;
+}
+
+footer {
+  @include font-size(10px);
+}
+
+header,
+html {
+  overflow: hidden;
+}
+
+header {
+  max-height: 80px;
+  width: 100%;
+}
+
+html {
+  height: 100vh;
+  position: relative;
+}
+
+main {
+  padding: 10px;
+}

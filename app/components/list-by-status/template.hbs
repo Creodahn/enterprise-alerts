@@ -1,0 +1,35 @@
+<div class="status-list">
+  <ul class="no-margin no-padding">
+    {{#if model}}
+      {{#if criticalSystems}}
+        <li class="group-header">
+          Alerts<div class="hr"></div>
+        </li>
+        {{system-list
+          model=criticalSystems
+          select="select"
+        }}
+      {{/if}}
+      {{#if informationalSystems}}
+        <li class="group-header">
+          Information<div class="hr"></div>
+        </li>
+        {{system-list
+          model=informationalSystems
+          select="select"
+        }}
+      {{/if}}
+      {{#if nominalSystems}}
+        <li class="separator"></li>
+        {{system-list
+          model=nominalSystems
+          select="select"
+        }}
+      {{/if}}
+    {{else}}
+      <li class="error-message flex-center flex-display flex-spacer">
+        <h3>Error loading data</h3>
+      </li>
+    {{/if}}
+  </ul>
+</div>

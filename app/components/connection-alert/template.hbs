@@ -1,0 +1,20 @@
+<div class="ui negative message fade flex-display flex-row flex-space-between {{if isRead "collapsed" ""}} {{if noConnection "in" "hidden"}}">
+  <div class="icon-container flex-display flex-half-spacer">
+    <i {{action "setConnectionAlertUnread"}} class="warning circle icon huge"></i>
+  </div>
+  <div class="detail flex-column flex-display flex-triple-spacer">
+    <h4>No Connection</h4>
+    <p>
+      Enterprise Alerts has detected that it is not able to connect to the
+      server to receive updates. It will continue to try periodically until
+      a connection can be re-established.
+    </p>
+    {{#if model}}
+      <p>
+        You may continue to use Enterprise Alerts as normal until connectivity is
+        restored.
+      </p>
+    {{/if}}
+    <button {{action "setConnectionAlertRead"}} class="flex-align-self-center ui button red">Ok</button>
+  </div>
+</div>

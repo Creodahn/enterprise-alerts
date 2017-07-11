@@ -1,0 +1,70 @@
+<!--
+     The `main` template serves as the parent of all of the other routes, as well
+     as the main screen of the application. It manages everything that the user
+     sees inside of the app. 
+-->
+<main class="ui padded stackable grid">
+  {{connection-alert
+    noConnection=noConnection
+  }}
+  {{#if isMobile}}
+    <div class="sixteen wide column flex-column flex-display">
+      {{#branding-container}}
+        {{overall-summary
+          lastCheckDate=lastCheckDate
+          noConnection=noConnection
+          model=model
+          refresh="refresh"
+        }}
+        {{list-selector
+          location=location
+          model=model
+          select="select"
+          updateLocation="updateLocation"
+        }}
+        {{#modal-window
+          closable=true
+          id="mobile-detail-modal"
+          title=selected.name
+          title-classes="text-red"
+          transition="horizontal flip"
+          modalClosed="deselect"
+        }}
+          {{detailed-system-view
+            isMobile=isMobile
+            model=selected
+            deselect="deselect"
+            showHistory="showHistory"
+          }}
+        {{/modal-window}}
+      {{/branding-container}}
+    </div>
+  {{else}}
+    <div class="seven wide column flex-column flex-display">
+      {{#branding-container}}
+        {{list-selector
+          location=location
+          model=model
+          select="select"
+          updateLocation="updateLocation"
+        }}
+      {{/branding-container}}
+    </div>
+    <div class="nine wide column">
+      {{overall-summary
+        lastCheckDate=lastCheckDate
+        noConnection=noConnection
+        model=model
+        refresh="refresh"
+      }}
+      {{detailed-system-view
+        isMobile=isMobile
+        model=selected
+        deselect="deselect"
+        showHistory="showHistory"
+      }}
+    </div>
+  {{/if}}
+</main>
+
+{{outlet}}

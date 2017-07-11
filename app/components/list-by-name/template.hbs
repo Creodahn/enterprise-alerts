@@ -1,0 +1,14 @@
+<div class="system-list">
+  <ul class="no-margin no-padding">
+    {{#if sortedSystems}}
+      {{system-list
+        model=sortedSystems
+        select="select"
+      }}
+    {{else}}
+      <li class="flex-center flex-display flex-spacer">
+        <h3>Error loading data</h3>
+      </li>
+    {{/if}}
+  </ul>
+</div>

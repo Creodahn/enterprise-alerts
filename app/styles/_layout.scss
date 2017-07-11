@@ -1,0 +1,13 @@
+// declare styling for summary blocks
+.summary {
+  @include border-radius(4px);
+  @include display-flex;
+  @include flex-direction(column);
+  @include transition(.5s);
+
+  background-color: #fff;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  max-height: 100%;
+  padding: 4px 10px;
+}

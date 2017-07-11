@@ -1,0 +1,28 @@
+<div class="summary">
+  <div class="flex-display flex-row flex-space-between">
+    <h5 class="flex-align-self-center flex-display flex-spacer no-margin">View By</h5>
+    <div class="ui buttons">
+      <button {{action "setSortType" "status"}} class="ui button {{if (eq sortType 'status') 'active' ''}}">
+        Status
+      </button>
+      <div class="or"></div>
+      <button {{action "setSortType" "name"}} class="ui button {{if (eq sortType 'name') 'active' ''}}">
+        Name
+      </button>
+    </div>
+  </div>
+  <div class="flex-center flex-display flex-row spacer-sm-top">
+    <h5 class="flex-align-self-center flex-display flex-spacer no-margin">For</h5>
+    <div id="location-select" class="ui selection dropdown">
+      <input type="hidden" name="location" value={{location}} onchange={{action "updateLocation" value="target.value"}}/>
+      <div class="default text">All</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item" data-value="All">All</div>
+        <div class="item" data-value="Central">Central</div>
+        <div class="item" data-value="North">North</div>
+        <div class="item" data-value="South">South</div>
+      </div>
+    </div>
+  </div>
+</div>

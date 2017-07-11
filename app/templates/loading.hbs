@@ -1,0 +1,16 @@
+<!--
+     The loading template displays the initial loading message when the app is
+     opened so that the user does not just see a blank screen during load time.
+     After the initial load, the {{loading-mask}} fills this purpose instead.
+     See the application.js route file for more on how this is done.
+-->
+<main class="flex-center flex-display">
+  <div class="flex-display">
+    {{branded-text-canvas
+      id="loading-text"
+      text="loading"
+      textX=155
+      textY=43
+    }}
+  </div>
+</main>

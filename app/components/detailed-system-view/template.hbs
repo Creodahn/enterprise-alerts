@@ -1,0 +1,31 @@
+<section class="{{if isVisible '' 'invisible'}} summary">
+  <div class="flex-display flex-row flex-space-between">
+    <h4 class="spacer-sm-bottom">Detailed System Information</h4>
+    {{#if closable}}
+      <i {{action "deselect"}} class="clickable remove icon"></i>
+    {{/if}}
+  </div>
+  {{color-swatch color=(concat "swatch-" model.color)}}
+  {{text-field
+    label="System"
+    value=model.name
+  }}
+  {{text-field
+    label="Location"
+    value=model.location
+  }}
+  {{text-box
+    label="Detail"
+    value=model.detail
+  }}
+  {{text-field
+    label="Date"
+    value=(moment-format model.date "ddd (MM/DD) h:mm A" timeZone="America/Denver")
+  }}
+
+  <div class="spacer-sm-bottom"></div>
+
+  <button id="history-button" type="button" {{action "showHistory"}} class="ui button flex-display flex-align-self-end">
+    History
+  </button>
+</section>

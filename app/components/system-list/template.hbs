@@ -1,0 +1,8 @@
+{{#each model as |system|}}
+  <li class="clickable list-item">
+    <a class="flex-align-center flex-display" href="" {{action "select" system}}>
+      <i class="flex-align-center {{system.iconCss}}"></i>
+      <span>{{system.name}}</span>
+    </a>
+  </li>
+{{/each}}

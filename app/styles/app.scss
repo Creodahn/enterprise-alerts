@@ -1,0 +1,18 @@
+/* App.scss */
+// Imports all partials to be combined into a single stylesheet on build
+
+// variables MUST be imported first
+@import 'variables';
+// functions and mixins MUST be imported before other partials
+@import 'functions';
+@import 'mixins';
+
+// Styles
+@import 'element-defaults';
+@import 'flex-classes';
+@import 'layout';
+@import 'lists';
+@import 'semantic-ui-modifier';
+@import 'swatch';
+@import 'text';
+@import 'utility';

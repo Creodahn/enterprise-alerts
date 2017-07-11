@@ -1,0 +1,17 @@
+<div>
+  {{#modal-window
+    id="loading-mask"
+    modal-classes="loading-mask small"
+    transition="vertical flip"
+  }}
+    {{branded-text-canvas
+      id="loading-canvas"
+      text="loading"
+      textX=155
+      textY=43
+    }}
+    {{#if supportsSVG}}
+      <img src="/assets/svg/hourglass.svg" />
+    {{/if}}
+  {{/modal-window}}
+</div>

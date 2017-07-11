@@ -1,0 +1,25 @@
+<!--
+     The history route displays a modal with the historic data of the appropriate
+     system when loaded. The modal is contained within a div to prevent an issue
+     where the modal was not proeprly removed from the DOM when users navigated
+     away from the route
+-->
+<div>
+  {{#modal-window
+    closable=true
+    id="history-modal"
+    showOnTransition=true
+    title=(concat "History for " model.firstObject.name " " model.firsObject.location)
+    title-classes="text-red"
+    transition="horizontal flip"
+    modalClosed="modalClosed"
+  }}
+    <div class="flex-spacer history-list">
+      <ul class="no-margin no-padding">
+        {{#each sortedHistory as |system|}}
+          {{history-item model=system}}
+        {{/each}}
+      </ul>
+    </div>
+  {{/modal-window}}
+</div>

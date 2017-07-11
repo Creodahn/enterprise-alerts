@@ -1,0 +1,33 @@
+{
+    "name": "com.uchealth.enterprisenotifications",
+    "version": "1.0.0",
+    "displayName": "UCHealth Alerts",
+    "cordova": {
+        "platforms": [
+            "android",
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-crosswalk-webview": {
+                "XWALK_VERSION": "23+",
+                "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+                "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+                "XWALK_MODE": "embedded",
+                "XWALK_MULTIPLEAPK": "true"
+            },
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-wkwebview-engine": {},
+            "de.appplant.cordova.plugin.local-notification": {}
+        }
+    },
+    "dependencies": {
+        "cordova-android": "~6.1.0",
+        "cordova-ios": "~4.3.1",
+        "cordova-plugin-app-event": "file:node_modules\\cordova-plugin-app-event",
+        "cordova-plugin-crosswalk-webview": "~2.3.0",
+        "cordova-plugin-device": "file:node_modules\\cordova-plugin-device",
+        "cordova-plugin-whitelist": "1",
+        "cordova-plugin-wkwebview-engine": "~1.1.3",
+        "de.appplant.cordova.plugin.local-notification": "git+https://github.com/katzer/cordova-plugin-local-notifications.git"
+    }
+}

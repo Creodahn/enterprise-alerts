@@ -1,0 +1,17 @@
+{{list-controls
+  location=location
+  sortType=sortType
+  setSortType="setSortType"
+  updateLocation="updateLocation"
+}}
+{{#if isStatusSort}}
+  {{list-by-status
+    model=model
+    select="select"
+  }}
+{{else}}
+  {{list-by-name
+    model=model
+    select="select"
+  }}
+{{/if}}

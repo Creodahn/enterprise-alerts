@@ -1,0 +1,113 @@
+{
+  "name": "enterprise-notifications",
+  "productName": "enterprise-notifications",
+  "version": "3.0.0",
+  "description": "Monitors UCHealth systems by region and alerts users of changes in status",
+  "license": "MIT",
+  "author": "",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "appCopyright": "Copyright (c) 2017 UCHealth eBusiness Department",
+        "appId": "UCHealth Enterprise Alert System",
+        "arch": "all",
+        "asar": true,
+        "icon": ".\\resources\\assets\\icons\\Icon.ico",
+        "name": "UCHealth Enterprise Alert System",
+        "overwrite": true,
+        "platform": "win32",
+        "prune": true,
+        "win32metadata": {
+          "CompanyName": "UCHealth",
+          "FileDescription": "UCHealth Enterprise Alert System",
+          "OriginalFilename": "enterprise-notifications.exe",
+          "ProductName": "UCHealth Enterprise Alert System",
+          "requested-execution-level": "asInvoker"
+        }
+      },
+      "electronWinstallerConfig": {
+        "authors": "justin.drew@uchealth.org",
+        "description": "UCHealth Enterprise Alert System",
+        "iconURL": "file://C:/enterprise-notifications/ember-electron/resources/assets/icons/Icon.ico",
+        "name": "Enterprise.Notifications",
+        "setupExe": "UCHealth Enterprise Alert System Installer.exe",
+        "title": "UCHealth Enterprise Alert System"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": ""
+      }
+    }
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "repository": "",
+  "scripts": {
+    "build": "ember build",
+    "start": "ember server",
+    "test": "ember test"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "broccoli-asset-rev": "^2.4.5",
+    "cryptojs": "^2.5.3",
+    "devtron": "^1.4.0",
+    "electron-prebuilt-compile": "1.6.11",
+    "ember-ajax": "^3.0.0",
+    "ember-cli": "2.13.1",
+    "ember-cli-app-version": "^3.0.0",
+    "ember-cli-babel": "^6.0.0",
+    "ember-cli-dependency-checker": "^1.3.0",
+    "ember-cli-eslint": "^3.0.0",
+    "ember-cli-htmlbars": "^1.1.1",
+    "ember-cli-htmlbars-inline-precompile": "^0.4.0",
+    "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-moment-shim": "^3.1.0",
+    "ember-cli-qunit": "^4.0.0",
+    "ember-cli-sass": "^6.1.3",
+    "ember-cli-shims": "^1.1.0",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-uglify": "^1.2.0",
+    "ember-cordova": "^0.4.10",
+    "ember-cryptojs-shim": "^3.0.0",
+    "ember-data": "^2.13.0",
+    "ember-electron": "^2.2.2",
+    "ember-export-application-global": "^2.0.0",
+    "ember-load-initializers": "^1.0.0",
+    "ember-moment": "^7.3.0",
+    "ember-resolver": "^4.0.0",
+    "ember-source": "~2.13.0",
+    "ember-truth-helpers": "^1.3.0",
+    "loader.js": "^4.2.3",
+    "semantic-ui-ember": "^2.0.1"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "private": true,
+  "dependencies": {
+    "electron-compile": "^6.4.1",
+    "electron-protocol-serve": "^1.3.0"
+  }
+}

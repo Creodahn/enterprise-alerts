@@ -1,0 +1,79 @@
+// utility classes that don't really fit anywhere else
+$alignments: center, left, right;
+$floats: left, right;
+$properties: margin, padding;
+
+$sides: '-bottom', '-horizontal', '-left', '-right', '-top', '-vertical';
+$spacings: ('-lg', 20px), ('-sm', 5px), ('-tiny', 1px), ('', 10px);
+
+// control text alignment
+@each $align in $alignments {
+  .align-#{$align} {
+    text-align: $align;
+  }
+}
+
+// control element float
+@each $float in $floats {
+  .float-#{$float} {
+    float: $float;
+  }
+}
+
+// force margin or padding to 0
+@each $property in $properties {
+  .no-#{$property} {
+    #{$property}: 0;
+  }
+}
+
+// set which cursor the user sees
+.clickable {
+  & * {
+    cursor: pointer !important;
+  }
+}
+
+// hide an element and its children
+.invisible {
+  & > * {
+    @include transition(.5s visibility);
+    visibility: hidden;
+  }
+
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+// pad an item on the sides without overriding values for top and bottom padding
+.side {
+  &-padding {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// declare classes for spacing elements using different sized margins
+@each $size, $px in $spacings {
+  .spacer#{$size} {
+    @each $side in $sides {
+      &#{$side} {
+        @if $side == '-horizontal' {
+          margin: 0 $px;
+        } @else if $side == '-vertical' {
+          margin: $px 0;
+        } @else {
+          margin#{$side}: $px;
+        }
+      }
+    }
+
+    margin: $px;
+  }
+}
+
+// underline an element using its current text color
+.underline {
+  border-bottom: 1px solid currentColor;
+}

@@ -1,4 +1,4 @@
-# enterprise-notifications
+# enterprise-alerts
 
 This README outlines the details of collaborating on this Ember application.
 This application replaces the older UCH Enterprise Alerts application. Given the new Ember.js and Electron.js architecture, it offers us much more flexibility to deploy the application to any major desktop OS (Windows 7+, macOS, or Linux). The inclusion of `ember-cordova` also allows us to package the application for deployment to Android and iOS devices.
